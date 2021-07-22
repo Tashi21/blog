@@ -1,3 +1,6 @@
+# Visual Studio Code specific
+/.vscode
+
 /vendor/
 node_modules/
 npm-debug.log
