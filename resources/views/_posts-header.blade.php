@@ -23,7 +23,9 @@
                 </x-dropdown-item>
                 @endforeach
             </x-dropdown>
-        </div> <!-- Other Filters -->
+        </div>
+
+        <!-- Other Filters -->
         {{-- <div class="relative flex lg:inline-flex items-center bg-gray-100 rounded-xl">
             <select class="flex-1 appearance-none bg-transparent py-2 pl-3 pr-9 text-sm font-semibold">
                 <option value="category" disabled selected>Other Filters
@@ -49,7 +51,7 @@
         <div class="relative flex lg:inline-flex items-center bg-gray-100 rounded-xl px-3 py-2">
             <form method="GET" action="#">
                 <input type="text" name="search" placeholder="Find something"
-                    class="bg-transparent placeholder-black font-semibold text-sm">
+                    class="bg-transparent placeholder-black font-semibold text-sm" value="{{request('search')}}">
             </form>
         </div>
     </div>
