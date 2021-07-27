@@ -9,6 +9,7 @@
         <div class="mt-6">
             <textarea name="body" class="w-full text-sm focus:outline-none focus:ring" rows="5"
                 placeholder="Enter your comment here." required></textarea>
+
             @error('body')
             <span class="text-xs text-red-500">{{$message}}</span>
             @enderror
@@ -24,13 +25,9 @@
 </x-panel>
 @else
 <p class="font-semibold">
-    <a href="/register" class="hover:underline">
-        Register
-    </a>
+    <a href="/register" class="hover:underline"> Register </a>
     or
-    <a href="/login" class="hover:underline">
-        log in
-    </a>
+    <a href="/login" class="hover:underline">log in</a>
     to leave a comment.
 </p>
 @endauth
