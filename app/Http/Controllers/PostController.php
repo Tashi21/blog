@@ -30,8 +30,6 @@ class PostController extends Controller
 
     public function store()
     {
-        ddd(Post::latest()->created_at);
-
         $attributes = request()->validate([
             'title' => 'required',
             'thumbnail' => 'required|image',
