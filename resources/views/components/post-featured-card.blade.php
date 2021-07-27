@@ -4,7 +4,7 @@
     border-opacity-0 hover:border-opacity-5 rounded-xl">
     <div class="py-6 px-5 lg:flex">
         <div class="flex-1 lg:mr-8">
-            <img src="/images/illustration-1.png" alt="Blog Post illustration" class="rounded-xl">
+            <img src="{{asset('storage/' . $post->thumbnail)}}" alt="Blog Post illustration" class="rounded-xl">
         </div>
 
         <div class="flex-1 flex flex-col justify-between">
@@ -21,7 +21,7 @@
                     </h1>
 
                     <span class="mt-2 block text-gray-400 text-xs">
-                        Published <time>{{$post->created_at->diffForHumans()}}</time>
+                        Published on <time>{{ $post->created_at->format('F j, Y') }}</time>
                     </span>
                 </div>
             </header>

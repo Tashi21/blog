@@ -34,25 +34,26 @@
             <div class="mt-8 md:mt-0 flex items-center">
                 @guest
                 <a href="/register"
-                    class="text-xs text-white bg-blue-500 rounded-full py-3 px-5 uppercase font-semibold">
+                    class="text-xs text-white bg-blue-500 hover:bg-blue-600 rounded-full py-3 px-5 uppercase font-semibold">
                     Register
                 </a>
 
                 <a href="/login"
-                    class="ml-3 text-xs text-white bg-blue-500 rounded-full py-3 px-5 uppercase font-semibold">
+                    class="ml-3 text-xs text-white bg-blue-500 hover:bg-blue-600 rounded-full py-3 px-5 uppercase font-semibold">
                     Login
                 </a>
                 @else
                 <span class="text-xs font-bold uppercase">Welcome, {{auth()->user()->name}}!</span>
 
-                <form action="/logout" method="POST" class="ml-3 text-xs text-white bg-blue-500 rounded-full py-3 px-5">
+                <form action="/logout" method="POST"
+                    class="ml-3 text-xs text-white bg-blue-500 hover:bg-blue-600 rounded-full py-3 px-5">
                     @csrf
                     <button type="submit" class="uppercase font-semibold">Logout</button>
                 </form>
                 @endguest
 
                 <a href="#newsletter"
-                    class="bg-blue-500 ml-3 rounded-full text-xs font-semibold text-white uppercase py-3 px-5">
+                    class="ml-3 text-xs text-white bg-blue-500 hover:bg-blue-600 rounded-full py-3 px-5 uppercase font-semibold">
                     Subscribe for Updates
                 </a>
             </div>
